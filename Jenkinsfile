@@ -5,9 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                      chmod 777
+                      chmod u+x
                     ./jenkins/build/mvn.sh mvn -B -DskipTests clean package
-                    chmod 777 
+                    chmod u+x
                     ./jenkins/build/build.sh
 
                 '''
