@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh (chmod 777 './jenkins/build/mvn.sh mvn -B -DskipTests clean package')
+                sh (chmod 777 ./jenkins/build/mvn.sh mvn -B -DskipTests clean package);
             }
         }
         stage('Test') {
